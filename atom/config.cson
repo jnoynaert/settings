@@ -1,0 +1,16 @@
+"*":
+  Hydrogen:
+    globalMode: true
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  core:
+    autoHideMenuBar: true
+    telemetryConsent: "no"
+    uriHandlerRegistration: "never"
+  editor:
+    fontFamily: "Hack"
+  "exception-reporting":
+    userId: "1a11364f-c9c3-4ffc-9699-de34bb6f22e3"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false

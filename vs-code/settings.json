@@ -1,0 +1,14 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "workbench.startupEditor": "newUntitledFile",
+    "julia.enableTelemetry": true,
+    "workbench.statusBar.visible": false,
+    "editor.fontFamily": "Hack",
+    "julia.runLinter": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderIndentGuides": false,
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace"
+}
