@@ -11,7 +11,7 @@ case ${answer:0:1} in
 
         parentdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
         rm -r ~/.jupyter/lab/user-settings/@jupyterlab
-        ln -s {parentdir}/jupyter-lab/@jupyterlab ~/.jupyter/lab/user-settings/@jupyterlab
+        ln -s ${parentdir}/jupyter-lab/@jupyterlab ~/.jupyter/lab/user-settings/@jupyterlab
 
         echo "Jupyterlab config files linked."
     ;;
