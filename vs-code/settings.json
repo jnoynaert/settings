@@ -10,5 +10,6 @@
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.renderIndentGuides": false,
-    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace"
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.cursorBlinking": true
 }
