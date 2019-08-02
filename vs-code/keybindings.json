@@ -3,9 +3,10 @@
     // Toggle between terminal and editor focus
 { "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
 { "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+{ "key": "ctrl+alt+`", "command": "workbench.action.terminal.toggleTerminal"},
 
-{ "key": "ctrl+UpArrow", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus"},
-{ "key": "ctrl+DownArrow", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus"},
+{ "key": "ctrl+up", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus"},
+{ "key": "ctrl+down", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus"},
 { "key": "ctrl+D", "command": "workbench.action.terminal.kill", "when": "terminalFocus"},
 
 { "key": "ctrl+shift+t", "command": "shellLauncher.launch"},
