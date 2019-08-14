@@ -1,15 +1,23 @@
 {
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.cursorBlinking": true,
+
     "workbench.startupEditor": "newUntitledFile",
-    "julia.enableTelemetry": true,
     "workbench.statusBar.visible": false,
+    
     "editor.fontFamily": "Hack",
-    "julia.runLinter": false,
+    
     "editor.minimap.renderCharacters": false,
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
     "editor.renderIndentGuides": false,
-    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
-    "terminal.integrated.cursorBlinking": true
+    "breadcrumbs.enabled": false,
+    
+    "editor.minimap.enabled": false,
+
+    "julia.runLinter": false,
+    "julia.enableTelemetry": true,
+    //"terminal.integrated.env.windows": {
+    //    "JULIA_NUM_THREADS": "4",
+    //}
 }
