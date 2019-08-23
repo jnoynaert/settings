@@ -1,6 +1,7 @@
 {
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
     "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.cursorBlinking": true,
 
     "workbench.startupEditor": "newUntitledFile",

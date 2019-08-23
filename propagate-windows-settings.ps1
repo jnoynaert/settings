@@ -31,7 +31,7 @@ if ($proceed = "y") {
         }
 
         #Atom settings
-        $atompath = "$HOME\.atom\"
+        $atompath = "$HOME\.atom"
         
         if (Test-Path -Path $atompath) {
             Write-Verbose "Removing old Atom settings..."
@@ -44,6 +44,24 @@ if ($proceed = "y") {
             Write-Verbose "Atom settings finished. Don't forget to install Hydrogen!"
         } else {
             Write-Verbose "Atom not detected."
+        }
+
+        #
+        $juliapath = "$HOME\.julia"
+        $juliaconfig = "$juliapath\config"
+
+        if (Test-Path -Path $juliaconfig) {
+            Write-Verbose "Removing old Julia startup file..."
+                try {Remove-Item "$juliaStartupPath\startup.jl"} catch{}
+        }
+
+        if (Test-Path $juliapath) {
+             Write-Verbose "Symlinking Julia settings..."
+             New-Item -ItemType HardLink -Path "$juliaconfg\startup.jl" -Value "$runpath\julia\startup.jl"
+
+            Write-Verbose "Julia settings finished. Don't forget to add either julia-vscode or the Atom packages language-julia, ident-detective, and latex-completions!"
+        } else {
+            Write-Verbose "Julia not detected."
         }
     }
 
