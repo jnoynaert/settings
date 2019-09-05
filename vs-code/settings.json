@@ -18,6 +18,7 @@
 
     "julia.runLinter": false,
     "julia.enableTelemetry": true,
+    "diffEditor.ignoreTrimWhitespace": true,
     //"terminal.integrated.env.windows": {
     //    "JULIA_NUM_THREADS": "4",
     //}
