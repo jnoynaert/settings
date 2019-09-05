@@ -18,6 +18,7 @@ if ($proceed = "y") {
         $vspath = "$env:APPDATA\Code\User"
         
         if (Test-Path -Path $vspath) {
+
             Write-Verbose "Removing old VS code settings..."
                 try { Remove-Item "$vspath\keybindings.json", "$vspath\settings.json" } catch {}
 
@@ -26,7 +27,9 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path "$vspath\settings.json" -Value "$runpath\vs-code\settings.json"
 
             Write-Verbose "VS code settings finished. Don't forget to install the Shell Launcher extension!"
+
         } else {
+
             Write-Verbose "VS code not detected."
         }
 
@@ -34,6 +37,7 @@ if ($proceed = "y") {
         $atompath = "$HOME\.atom"
         
         if (Test-Path -Path $atompath) {
+
             Write-Verbose "Removing old Atom settings..."
                 try { Remove-Item "$atompath\keymap.cson", "$atompath\config.cson" } catch {}
 
@@ -42,30 +46,44 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path "$atompath\config.cson" -Value "$runpath\atom\config.cson"
 
             Write-Verbose "Atom settings finished. Don't forget to install Hydrogen!"
+
         } else {
+
             Write-Verbose "Atom not detected."
         }
 
-        #
+        #Julia settings
         $juliapath = "$HOME\.julia"
         $juliaconfig = "$juliapath\config"
 
-        if (Test-Path -Path $juliaconfig) {
-            Write-Verbose "Removing old Julia startup file..."
-                try {Remove-Item "$juliaStartupPath\startup.jl"} catch{}
-        }
+        if (Test-Path -Path $juliapath) {
 
-        if (Test-Path $juliapath) {
+            #if julia present but config directory is not:
+            if (-Not (Test-Path -Path $juliaconfig)) {
+
+                Write-Verbose "Adding config folder to Julia install..."
+                    mkdir $juliaconfig
+
+            } else {
+
+                Write-Verbose "Removing old Julia startup file..."
+                    try {Remove-Item "$juliaconfig\startup.jl"} catch{}
+
+            }
+            
              Write-Verbose "Symlinking Julia settings..."
-             New-Item -ItemType HardLink -Path "$juliaconfg\startup.jl" -Value "$runpath\julia\startup.jl"
+                New-Item -ItemType HardLink -Path "$juliaconfig\startup.jl" -Value "$runpath\julia\startup.jl"
 
             Write-Verbose "Julia settings finished. Don't forget to add either julia-vscode or the Atom packages language-julia, ident-detective, and latex-completions!"
+
         } else {
+
             Write-Verbose "Julia not detected."
         }
     }
 
     finally {
+
         $ErrorActionPreference = $old_ErrorActionPreference
         $VerbosePreference = $old_VerbosePreference
         Read-Host -prompt "Settings propagation finished. Press any key to continue"
@@ -74,5 +92,6 @@ if ($proceed = "y") {
 }
 
 else {
+
     Write-Verbose "Cancelling..."
 }
