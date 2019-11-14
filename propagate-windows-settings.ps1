@@ -25,7 +25,7 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path "$vspath\keybindings.json" -Value "$runpath\vs-code\keybindings.json"
                 New-Item -ItemType HardLink -Path "$vspath\settings.json" -Value "$runpath\vs-code\settings.json"
 
-            Write-Verbose "VS code settings finished. Don't forget to install the Shell Launcher extension!"
+            Write-Verbose "VS code settings finished. Don't forget to install the Shell Launcher extension and One Dark Pro theme!"
         } else {
             Write-Verbose "VS code not detected."
         }

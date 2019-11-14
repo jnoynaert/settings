@@ -19,6 +19,7 @@
     "julia.runLinter": false,
     "julia.enableTelemetry": true,
     "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.colorTheme": "One Dark Pro",
     //"terminal.integrated.env.windows": {
     //    "JULIA_NUM_THREADS": "4",
     //}
