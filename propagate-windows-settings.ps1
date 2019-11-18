@@ -79,6 +79,35 @@ if ($proceed = "y") {
 
             Write-Verbose "Julia not detected."
         }
+
+        #Jupyter lab settings
+        $jupyterpath = "$HOME\.jupyter\lab"
+        $jupyterconfig = "$jupyterpath\user-settings\"
+
+        if (Test-Path -Path $jupyterpath) {
+
+            #if jupyter present but config directory is not:
+            if (-Not (Test-Path -Path $jupyterconfig)) {
+
+                Write-Verbose "Adding config folder to Jupyter install..."
+                    mkdir $jupyterconfig
+
+            } else {
+
+                Write-Verbose "Removing old Jupyter settings folder..."
+                    try {Remove-Item "$jupyterconfig\@jupyterlab" -recurse} catch{}
+
+            }
+            
+             Write-Verbose "Symlinking Jupyter settings..."
+                New-Item -ItemType Junction -Path "$jupyterconfig\@jupyterlab\" -Target "$runpath\jupyter-lab\@jupyterlab\"
+
+            Write-Verbose "Jupyter settings finished."
+
+        } else {
+
+            Write-Verbose "Jupyter not detected."
+        }
     }
 
     finally {

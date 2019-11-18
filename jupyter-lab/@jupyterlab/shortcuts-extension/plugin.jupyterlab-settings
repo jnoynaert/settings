@@ -1,17 +1,1 @@
-{
-  "notebook:collapse-selected-outputs": {
-    "command": "notebook:hide-cell-outputs",
-    "keys": [
-      "O"
-    ],
-    "selector": ".jp-Notebook:focus"
-  },    
-
-  "notebook:expand-selected-outputs": {
-    "command": "notebook:show-cell-outputs",
-    "keys": [
-      "Shift O"
-    ],
-    "selector": ".jp-Notebook:focus"
-  }
-}
+{}
