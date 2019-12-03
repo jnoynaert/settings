@@ -99,7 +99,7 @@
         {
             "command": "apputils:activate-command-palette",
             "keys": [
-                "Accel Shift P"
+                "Accel Shift C"
             ],
             "selector": "body"
         },
