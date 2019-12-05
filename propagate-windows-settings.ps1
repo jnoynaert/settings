@@ -95,7 +95,7 @@ if ($proceed = "y") {
             } else {
 
                 Write-Verbose "Removing old Jupyter settings folder..."
-                    try {Remove-Item "$jupyterconfig\@jupyterlab" -recurse} catch{}
+                    try {Remove-Item "$jupyterconfig\@jupyterlab" -Recurse -Force} catch{}
 
             }
             
