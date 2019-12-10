@@ -8,7 +8,7 @@
     "workbench.statusBar.visible": false,
     
     "editor.fontFamily": "Hack",
-    
+
     "editor.minimap.renderCharacters": false,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.renderIndentGuides": false,
@@ -16,12 +16,19 @@
     
     "editor.minimap.enabled": false,
 
+    //"git.countBadge": "off",
+    //hack to make all badges transparent, since some of them lack a setting:
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#0000",
+        "activityBarBadge.foreground": "#0000",
+    },
+
     "julia.runLinter": false,
     "julia.enableTelemetry": true,
     "diffEditor.ignoreTrimWhitespace": true,
     "workbench.colorTheme": "One Dark Pro",
     "oneDarkPro.editorTheme": "Onedark Pro",
-    //"terminal.integrated.env.windows": {
-    //    "JULIA_NUM_THREADS": "4",
-    //}
+    "terminal.integrated.env.windows": {
+        "JULIA_NUM_THREADS": "4",
+    }
 }
