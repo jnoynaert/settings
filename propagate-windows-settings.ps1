@@ -26,7 +26,12 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path "$vspath\keybindings.json" -Value "$runpath\vs-code\keybindings.json"
                 New-Item -ItemType HardLink -Path "$vspath\settings.json" -Value "$runpath\vs-code\settings.json"
 
-            Write-Verbose "VS code settings finished. Don't forget to install the Shell Launcher extension and One Dark Pro theme!"
+            Write-Verbose "Adding extensions..."
+                code --install-extension zhuangtongfa.material-theme #onedark pro
+                code --install-extension tyriar.shell-launcher
+                code --install-extension julialang.language-julia
+
+            Write-Verbose "VS code settings & extensions finished."
         } else {
 
             Write-Verbose "VS code not detected."
@@ -54,6 +59,7 @@ if ($proceed = "y") {
         #Julia settings
         $juliapath = "$HOME\.julia"
         $juliaconfig = "$juliapath\config"
+        $compile_sysimage = $false
 
         if (Test-Path -Path $juliapath) {
 
@@ -73,7 +79,14 @@ if ($proceed = "y") {
              Write-Verbose "Symlinking Julia settings..."
                 New-Item -ItemType HardLink -Path "$juliaconfig\startup.jl" -Value "$runpath\julia\startup.jl"
 
-            Write-Verbose "Julia settings finished. Don't forget to add either julia-vscode or the Atom packages language-julia, ident-detective, and latex-completions!"
+            Write-Verbose "Attempting to compile sysimage..."
+            if ($compile_sysimage) {
+                try {julia -e 'using Pkg; Pkg.add("WinRPM"); using WinRPM; WinRPM.install("gcc")'} catch { Write-Verbose "Error adding GCC"}
+                try {julia -e 'using Pkg; Pkgd.add("PackageCompiler"); using PackageCompiler; force_native_image!()'} catch { Write-Verbose "Error compiling Julia sysimage"}
+            }
+
+
+            Write-Verbose "Julia settings finished. If using Atom/Hydrogen, you'll need language-julia, ident-detective, and latex-completions."
 
         } else {
 
