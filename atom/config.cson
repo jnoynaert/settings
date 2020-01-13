@@ -9,8 +9,18 @@
     uriHandlerRegistration: "never"
   editor:
     fontFamily: "Hack"
+    scrollPastEnd: true
   "exception-reporting":
     userId: "1a11364f-c9c3-4ffc-9699-de34bb6f22e3"
+  "julia-client":
+    firstBoot: false
+    uiOptions:
+      enableMenu: true
+      enableToolBar: true
+  "tool-bar":
+    position: "Left"
   "tree-view": {}
+  "uber-juno":
+    disable: true
   welcome:
     showOnStartup: false
