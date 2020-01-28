@@ -118,7 +118,7 @@ if ($proceed = "y") {
             }
             
             Write-Verbose "Symlinking Jupyter settings..."
-                New-Item -ItemType HardLink -Path "$jupyterconfig\@jupyterlab\" -Target "$runpath\jupyter-lab\@jupyterlab\"
+                New-Item -ItemType Junction -Path "$jupyterconfig\@jupyterlab\" -Target "$runpath\jupyter-lab\@jupyterlab\"
 
             Write-Verbose "Jupyter settings finished."
 
@@ -131,8 +131,11 @@ if ($proceed = "y") {
         $terminalconfig = "$env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json"
         if (Test-Path -Path $terminalconfig) {
 
+            Write-Verbose "Removing old terminal settings..."
+                try { Remove-Item $terminalconfig } catch {}
+
             Write-Verbose "Symlinking Windows terminal settings..."
-                New-Item -ItemType Junction -Path $terminalconfig -Target "$runpath\windows-terminal\profiles.json"
+                New-Item -ItemType HardLink -Path $terminalconfig -Value "$runpath\windows-terminal\profiles.json"
 
             Write-Verbose "Windows terminal settings finished."
 

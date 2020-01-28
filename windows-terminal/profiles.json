@@ -1,6 +1,6 @@
 
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
+// For documentation on these settings, see: https://aka.ms/terminal-documentation, https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md
 // To restore to defaults and autodetect shells, delete everything in this file.
 
 {
@@ -50,5 +50,38 @@
 
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": []
+    "keybindings": [
+        {
+            "command":"newTab",
+            "keys": ["ctrl+t"]
+        },
+        {
+            "command":"closeTab",
+            "keys": ["ctrl+w"]
+        },
+        {
+            "command":"nextTab",
+            "keys": ["ctrl+tab"]
+        },
+        {
+            "command":"prevTab",
+            "keys": ["ctrl+shift+tab"]
+        },
+        {
+            "command":"openNewTabDropdown",
+            "keys": ["ctrl+shift+t"]
+        },
+        {
+            "command":"splitHorizontal",
+            "keys": ["ctrl+h"]
+        },
+        {
+            "command":"splitVertical",
+            "keys": ["ctrl+v"]
+        },
+        {
+            "command":"closePane",
+            "keys": ["ctrl+k"]
+        }
+    ]
 }
