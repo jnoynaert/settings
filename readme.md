@@ -6,3 +6,6 @@
     - Added Windows Terminal settings
 - November 2019
     - Added Jupyter Lab to Windows script
+    
+# Todo
+- Migrate to dotbot
