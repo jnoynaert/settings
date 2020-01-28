@@ -81,7 +81,23 @@
         },
         {
             "command":"closePane",
-            "keys": ["ctrl+k"]
+            "keys": ["ctrl+q"]
+        },
+        {
+            "command":"moveFocusLeft",
+            "keys":["ctrl+j"]
+        },
+        {
+            "command":"moveFocusDown",
+            "keys":["ctrl+k"]
+        },
+        {
+            "command":"moveFocusUp",
+            "keys":["ctrl+l"]
+        },
+        {
+            "command":"moveFocusRight",
+            "keys":["ctrl+;"]
         }
     ]
 }
