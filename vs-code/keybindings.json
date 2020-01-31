@@ -11,6 +11,25 @@
 
 { "key": "ctrl+shift+t", "command": "shellLauncher.launch"},
 
-{ "key": "ctrl+F11", "command": "workbench.action.toggleZenMode"}
+{
+    "key": "ctrl+F11",
+    "command": "workbench.action.toggleZenMode"
+},
+{
+    "key": "ctrl+tab",
+    "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+},
+{
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
+},
+{
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup"
+},
+{
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditorInGroup"
+}
 
 ]
