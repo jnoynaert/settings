@@ -29,5 +29,6 @@
     "workbench.colorTheme": "One Dark Pro",
     "oneDarkPro.editorTheme": "Onedark Pro",
     "julia.enableCrashReporter": true,
-    "julia.NumThreads": 28
+    "julia.NumThreads": 28,
+    "files.defaultLanguage": "markdown"
 }

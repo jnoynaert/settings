@@ -6,9 +6,12 @@
 # Run this boxstarter by calling the following from an **elevated** command-prompt:
 # 	start http://boxstarter.org/package/nr/url?<URL-TO-RAW-GIST>
 # OR
-# 	Install-BoxstarterPackage -PackageName <URL-TO-RAW-GIST> -DisableReboots
+# 	Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/jnoynaert/settings/master/boxstarter.ps1 -DisableReboots
 #
 # Learn more: http://boxstarter.org/Learn/WebLauncher
+
+
+# please note: if you are running the community edition of chocolatey, then changes made outside of chocolately are not automatically synced!
 
 #---- TEMPORARY ---
 Disable-UAC
