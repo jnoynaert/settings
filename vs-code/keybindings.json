@@ -11,6 +11,14 @@
 
 { "key": "ctrl+shift+t", "command": "shellLauncher.launch"},
 
-{ "key": "ctrl+F11", "command": "workbench.action.toggleZenMode"}
+{
+    "key": "ctrl+F11",
+    "command": "workbench.action.toggleZenMode"
+},
+
+{
+    "key": "ctrl+g",
+    "command": "workbench.action.gotoLine"
+}
 
 ]
