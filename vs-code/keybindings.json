@@ -15,10 +15,37 @@
     "key": "ctrl+F11",
     "command": "workbench.action.toggleZenMode"
 },
-
 {
-    "key": "ctrl+g",
-    "command": "workbench.action.gotoLine"
+    "key": "ctrl+tab",
+    "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+},
+{
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
+},
+{
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup"
+},
+{
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditorInGroup"
+},
+{
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.focusNextGroup"
+},
+{
+    "key": "ctrl+pageup",
+    "command": "workbench.action.focusPreviousGroup"
+},
+{
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.nextEditor"
+},
+{
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.previousEditor"
 }
 
 ]

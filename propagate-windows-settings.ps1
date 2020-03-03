@@ -1,4 +1,5 @@
 #removes current windows settings and establishes a hard symlink to the repo file
+$compile_julia_sysimage = $false
 
 $proceed = Read-Host -prompt "Warning: script will destroy current settings for programs in the script. Continue? y/n"
 
@@ -59,7 +60,6 @@ if ($proceed = "y") {
         #Julia settings
         $juliapath = "$HOME\.julia"
         $juliaconfig = "$juliapath\config"
-        $compile_sysimage = $false
 
         if (Test-Path -Path $juliapath) {
 
@@ -76,13 +76,18 @@ if ($proceed = "y") {
 
             }
             
-             Write-Verbose "Symlinking Julia settings..."
+            Write-Verbose "Symlinking Julia settings..."
                 New-Item -ItemType HardLink -Path "$juliaconfig\startup.jl" -Value "$runpath\julia\startup.jl"
 
-            Write-Verbose "Attempting to compile sysimage..."
-            if ($compile_sysimage) {
+            if ($compile_julia_sysimage) {
+                
+                Write-Verbose "Attempting to compile sysimage..."
                 try {julia -e 'using Pkg; Pkg.add("WinRPM"); using WinRPM; WinRPM.install("gcc")'} catch { Write-Verbose "Error adding GCC"}
                 try {julia -e 'using Pkg; Pkgd.add("PackageCompiler"); using PackageCompiler; force_native_image!()'} catch { Write-Verbose "Error compiling Julia sysimage"}
+
+            } else {
+
+                Write-Verbose "Not attempting to compile julia sysimage..."
             }
 
 
@@ -112,7 +117,7 @@ if ($proceed = "y") {
 
             }
             
-             Write-Verbose "Symlinking Jupyter settings..."
+            Write-Verbose "Symlinking Jupyter settings..."
                 New-Item -ItemType Junction -Path "$jupyterconfig\@jupyterlab\" -Target "$runpath\jupyter-lab\@jupyterlab\"
 
             Write-Verbose "Jupyter settings finished."
@@ -120,6 +125,23 @@ if ($proceed = "y") {
         } else {
 
             Write-Verbose "Jupyter not detected."
+        }
+
+        #Windows terminal settings
+        $terminalconfig = "$env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json"
+        if (Test-Path -Path $terminalconfig) {
+
+            Write-Verbose "Removing old terminal settings..."
+                try { Remove-Item $terminalconfig } catch {}
+
+            Write-Verbose "Symlinking Windows terminal settings..."
+                New-Item -ItemType HardLink -Path $terminalconfig -Value "$runpath\windows-terminal\profiles.json"
+
+            Write-Verbose "Windows terminal settings finished."
+
+        } else {
+
+            Write-Verbose "Windows terminal not detected."
         }
     }
 
