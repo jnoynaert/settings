@@ -31,6 +31,7 @@ if ($proceed = "y") {
                 code --install-extension zhuangtongfa.material-theme #onedark pro
                 code --install-extension tyriar.shell-launcher
                 code --install-extension julialang.language-julia
+                code --install-extension guidotapia2.unicode-math-vscode
 
             Write-Verbose "VS code settings & extensions finished."
         } else {
