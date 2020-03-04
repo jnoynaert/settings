@@ -30,5 +30,7 @@
     "oneDarkPro.editorTheme": "Onedark Pro",
     "julia.enableCrashReporter": true,
     "julia.NumThreads": 16,
-    "files.defaultLanguage": "markdown"
+    "files.defaultLanguage": "markdown",
+    "editor.find.autoFindInSelection": "always",
+    "editor.find.seedSearchStringFromSelection": false
 }
