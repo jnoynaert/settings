@@ -33,4 +33,8 @@
     "files.defaultLanguage": "markdown",
     "editor.find.autoFindInSelection": "always",
     "editor.find.seedSearchStringFromSelection": false
+
+    //ctrl+shift+G: jump to line
+    //ctrl+alt+up/down: new cursor above/below
+    //ctrl+shift+[]: expand/collapse folding of struct/function
 }
