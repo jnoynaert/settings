@@ -64,23 +64,6 @@ choco install sharex
 Install-ChocolateyPinnedTaskBarItem -TargetFilePath "$env:ProgramFiles\Typora\Typora.exe"
 Install-ChocolateyPinnedTaskBarItem -TargetFilePath"$env:APPDATA\Local\Programs\Microsoft VS Code\Code.exe"
 
-# WSL
-Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
-Add-AppxPackage -Path ~/Ubuntu.appx
-
-RefreshEnv
-Ubuntu1804 install --root
-Ubuntu1804 run apt update
-Ubuntu1804 run apt upgrade -y
-
-Ubuntu1804 run apt-get install git -y
-
-Ubuntu1804 run curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-Ubuntu1804 run cargo install broot skim ripgrep miniserve
-Ubuntu1804 run broot
-
-
-
 #--- Uninstall unnecessary applications that come with Windows out of the box ---
 
 
@@ -261,7 +244,6 @@ If (-Not (Test-Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Adv
 }
 Set-ItemProperty -Path "HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" -Name PeopleBand -Type DWord -Value 0
 
-
 # for security:
 Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 
@@ -269,6 +251,21 @@ Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
+
+# WSL
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
+Add-AppxPackage -Path ~/Ubuntu.appx
+
+RefreshEnv
+Ubuntu1804 install --root
+Ubuntu1804 run apt update
+Ubuntu1804 run apt upgrade -y
+
+Ubuntu1804 run apt-get install git -y
+
+Ubuntu1804 run curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Ubuntu1804 run cargo install broot skim ripgrep miniserve
+Ubuntu1804 run broot
 
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
