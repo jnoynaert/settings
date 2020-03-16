@@ -259,7 +259,7 @@ Add-AppxPackage -Path ~/Ubuntu.appx
 RefreshEnv
 Ubuntu1804 install --root
 Ubuntu1804 run apt update
-Ubuntu1804 run apt upgrade -y
+#Ubuntu1804 run apt upgrade -y #may require onscreen prompts to upgrade running services; this will stall the boxstarter run and blank the powershell session screen
 
 Ubuntu1804 run apt-get install git -y
 
