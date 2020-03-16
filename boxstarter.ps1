@@ -264,8 +264,8 @@ Ubuntu1804 run apt update
 Ubuntu1804 run apt-get install git -y
 
 Ubuntu1804 run curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-Ubuntu1804 run cargo install broot skim ripgrep miniserve
-Ubuntu1804 run broot
+#Ubuntu1804 run cargo install broot skim ripgrep miniserve
+#Ubuntu1804 run broot
 
 #--- Rename the Computer ---
 # Requires restart, or add the -Restart flag
