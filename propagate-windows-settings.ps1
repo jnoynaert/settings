@@ -138,8 +138,10 @@ if ($proceed = "y") {
             Write-Verbose "Symlinking Windows terminal settings..."
                 New-Item -ItemType HardLink -Path $terminalconfig -Value "$runpath\windows-terminal\profiles.json"
 
+            #Write-Verbose "Adding right-click launch..." try { reg import "$runpath\windows-terminal\wt.reg" } catch{ Write-Verbose $_ }
+
             Write-Verbose "Windows terminal settings finished."
-            Write-Verbose "Merge the settings/windows-terminal/wt.reg registry modification to add right-click terminal launches."
+            Write-Verbose "*Edit windows-terminal/wt.reg and run manually to add right-click shell launch from within explorer."
 
         } else {
 
