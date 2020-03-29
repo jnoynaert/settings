@@ -16,14 +16,16 @@
             "name": "Windows PowerShell",
             "commandline": "powershell.exe",
             "hidden": false,
-            "fontFace": "Cousine"
+            "fontFace": "Cousine",
+            "startingDirectory": "."
         },
         {
             // Make changes here to the cmd.exe profile
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
             "name": "cmd",
             "commandline": "cmd.exe",
-            "hidden": false
+            "hidden": false,
+            "startingDirectory": "."
         },
         {
             "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
@@ -31,7 +33,8 @@
             "name": "Debian",
             "source": "Windows.Terminal.Wsl",
             "fontFace": "Cascadia Code",
-            "fontSize": 13
+            "fontSize": 13,
+            "startingDirectory": "."
         },
         {
             "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -44,7 +47,8 @@
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6102}",
             "name": "Anaconda Prompt",
             "commandline": "cmd.exe /K C:\\Users\\jnoynaert\\.julia\\conda\\3\\Scripts\\activate.bat",
-            "hidden": false
+            "hidden": false,
+            "startingDirectory": "."
         }
     ],
 

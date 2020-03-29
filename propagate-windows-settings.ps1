@@ -139,6 +139,7 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path $terminalconfig -Value "$runpath\windows-terminal\profiles.json"
 
             Write-Verbose "Windows terminal settings finished."
+            Write-Verbose "Merge the settings/windows-terminal/wt.reg registry modification to add right-click terminal launches."
 
         } else {
 
@@ -157,5 +158,5 @@ if ($proceed = "y") {
 
 else {
 
-    Write-Verbose "Cancelling..."
+    Read-Host -prompt "Cancelled. Press any key to continue"
 }
