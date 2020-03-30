@@ -141,11 +141,30 @@ if ($proceed = "y") {
             #Write-Verbose "Adding right-click launch..." try { reg import "$runpath\windows-terminal\wt.reg" } catch{ Write-Verbose $_ }
 
             Write-Verbose "Windows terminal settings finished."
-            Write-Verbose "*Edit windows-terminal/wt.reg and run manually to add right-click shell launch from within explorer."
+            Write-Verbose "*Edit windows-terminal/wt.reg with correct user path and run manually to add right-click shell launch from within explorer."
 
         } else {
 
             Write-Verbose "Windows terminal not detected."
+        }
+
+        #Azure data studio settings
+        $adsconfig = "$env:APPDATA\azuredatastudio\User"
+        if (Test-Path -Path $adsconfig) {
+
+            Write-Verbose "Removing old Azure Data Studio settings..."
+                try { Remove-Item "$adsconfig\keybindings.json" } catch {}
+                # try { Remove-Item "$adsconfig\settings.json" } catch {}
+
+            Write-Verbose "Symlinking ADS settings..."
+                New-Item -ItemType HardLink -Path "$adsconfig\keybindings.json" -Value "$runpath\azure-data-studio\keybindings.json"
+                # New-Item -ItemType HardLink -Path "$adsconfig\settings.json" -Value "$runpath\azure-data-studio\settings.json"
+
+            Write-Verbose "Azure Data Studio settings finished. Don't forget to install Sand Dance extension."
+
+        } else {
+
+            Write-Verbose "Azure Data Studio not detected."
         }
     }
 
