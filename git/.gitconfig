@@ -3,4 +3,6 @@
 	name = Jared
 [alias]
 	adog = log --all --decorate --oneline --graph
+	dog = log --decorate --oneline --graph
 	history = log --graph --abbrev-commit --decorate --date=relative --all
+	
