@@ -1,9 +1,16 @@
 #!/bin/bash
-# note that the path for the symlink assumes this script stays in the jupyter-lab folder
-# note sure if this would behave with WSL?
+# may need to chmod u+x this file
 
-# Jupyter lab settings probably reside in ~/.jupyter/lab/user-settings/@jupyterlab (match that root node to @jupyterlab in this folder)
+# git settings
+echo "Symlinking git config."
 
+parentdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+rm -r ~/.gitconfig
+ln -s ${parentdir}/git/.gitconfig ~/.gitconfig
+
+echo "Git config linked."
+
+# Jupyter lab settings
 read -p "Confirm location of settings at ~/.jupyter/lab/user-settings/@jupyterlab (y/n)?" answer
 case ${answer:0:1} in
     y|Y )
@@ -20,5 +27,3 @@ case ${answer:0:1} in
         echo "Jupyterlab config cancelled."
     ;;
 esac
-
-
