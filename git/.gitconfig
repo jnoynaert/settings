@@ -6,3 +6,5 @@
 	dog = log --decorate --oneline --graph
 	history = log --graph --abbrev-commit --decorate --date=relative --all
 	
+[push]
+	followTags = true
