@@ -129,7 +129,7 @@ if ($proceed = "y") {
         }
 
         #Windows terminal settings
-        $terminalconfig = "$env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json"
+        $terminalconfig = "$env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
         if (Test-Path -Path $terminalconfig) {
 
             Write-Verbose "Removing old terminal settings..."
