@@ -1,5 +1,5 @@
 {
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
     "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.cursorBlinking": true,
@@ -32,7 +32,10 @@
     "julia.NumThreads": 16,
     "files.defaultLanguage": "markdown",
     "editor.find.autoFindInSelection": "always",
-    "editor.find.seedSearchStringFromSelection": false
+    "editor.find.seedSearchStringFromSelection": false,
+    "python.pythonPath": "C:\\Users\\jnoynaert\\Anaconda3\\python.exe",
+    "python.dataScience.searchForJupyter": false,
+    "extensions.ignoreRecommendations": false
 
     //ctrl+shift+G: jump to line
     //ctrl+alt+up/down: new cursor above/below

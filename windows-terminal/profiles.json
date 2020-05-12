@@ -46,7 +46,7 @@
             // Make changes here to the cmd.exe profile
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6102}",
             "name": "Anaconda Prompt",
-            "commandline": "cmd.exe /K C:\\Users\\jnoynaert\\.julia\\conda\\3\\Scripts\\activate.bat",
+            "commandline": "cmd.exe /K C://Users//jnoynaert//Anaconda3//Scripts//activate.bat C://Users//jnoynaert//Anaconda3",
             "hidden": false,
             "startingDirectory": "."
         }

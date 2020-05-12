@@ -1,6 +1,6 @@
 {
     "editorConfig": {
-        "fontFamily": "Fira Mono",
+        "fontFamily": "Fira Code",
         "fontSize": 15
     }
 }
