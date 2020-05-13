@@ -29,15 +29,19 @@
     "workbench.colorTheme": "One Dark Pro",
     "oneDarkPro.editorTheme": "Onedark Pro",
     "julia.enableCrashReporter": true,
-    "julia.NumThreads": 16,
+    "julia.NumThreads": 4,
     "files.defaultLanguage": "markdown",
     "editor.find.autoFindInSelection": "always",
     "editor.find.seedSearchStringFromSelection": false,
     "python.pythonPath": "C:\\Users\\jnoynaert\\Anaconda3\\python.exe",
     "python.dataScience.searchForJupyter": false,
-    "extensions.ignoreRecommendations": false
-
-    //ctrl+shift+G: jump to line
-    //ctrl+alt+up/down: new cursor above/below
-    //ctrl+shift+[]: expand/collapse folding of struct/function
+    "extensions.ignoreRecommendations": false,
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        }
+    ]
 }
