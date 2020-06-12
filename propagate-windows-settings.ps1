@@ -32,6 +32,7 @@ if ($proceed = "y") {
                 code --install-extension tyriar.shell-launcher
                 code --install-extension julialang.language-julia
                 code --install-extension guidotapia2.unicode-math-vscode
+                #code --install-extension eamodio.gitlens
 
             Write-Verbose "VS code settings & extensions finished."
         } else {
