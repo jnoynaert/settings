@@ -6,5 +6,7 @@
 	dog = log --decorate --oneline --graph
 	history = log --graph --abbrev-commit --decorate --date=relative --all
 	amend = commit --amend
+	tag = tag -a
+	merge = merge --no-ff
 [push]
 	followTags = true

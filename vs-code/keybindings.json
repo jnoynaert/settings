@@ -47,9 +47,4 @@
     "key": "ctrl+pageup",
     "command": "-workbench.action.previousEditor"
 }
-
-    //ctrl+shift+G: jump to line
-    //ctrl+alt+up/down: new cursor above/below
-    //ctrl+shift+[]: expand/collapse folding of struct/function
-
 ]

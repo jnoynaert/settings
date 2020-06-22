@@ -1,21 +1,31 @@
 {
-    "terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
+    //"terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
     "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.cursorBlinking": true,
 
     "workbench.startupEditor": "newUntitledFile",
     "workbench.statusBar.visible": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "oneDarkPro.editorTheme": "Onedark Pro",
     
     "editor.fontFamily": "Hack",
 
     "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.renderIndentGuides": false,
+    "editor.find.autoFindInSelection": "always",
+    "editor.find.seedSearchStringFromSelection": false,
     "breadcrumbs.enabled": false,
-    
-    "editor.minimap.enabled": false,
 
+    "files.defaultLanguage": "markdown",
+
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "extensions.ignoreRecommendations": false,
+    
     //"git.countBadge": "off",
     //hack to make all badges transparent, since some of them lack a setting:
     "workbench.colorCustomizations": {
@@ -23,25 +33,17 @@
         "activityBarBadge.foreground": "#0000",
     },
 
-    "julia.runLinter": false,
+    "powershell.integratedConsole.showOnStartup": false,
+
     "julia.enableTelemetry": true,
-    "diffEditor.ignoreTrimWhitespace": true,
-    "workbench.colorTheme": "One Dark Pro",
-    "oneDarkPro.editorTheme": "Onedark Pro",
     "julia.enableCrashReporter": true,
     "julia.NumThreads": 4,
-    "files.defaultLanguage": "markdown",
-    "editor.find.autoFindInSelection": "always",
-    "editor.find.seedSearchStringFromSelection": false,
-    "python.pythonPath": "C:\\Users\\jnoynaert\\Anaconda3\\python.exe",
+    
     "python.dataScience.searchForJupyter": false,
-    "extensions.ignoreRecommendations": false,
-    "mssql.connections": [
-        {
-            "server": "{{put-server-name-here}}",
-            "database": "{{put-database-name-here}}",
-            "user": "{{put-username-here}}",
-            "password": ""
-        }
-    ]
+    
+    "python.formatting.provider": "black",
+    "python.dataScience.askForKernelRestart": false,
+    "[python]": {
+        "editor.formatOnSave": true
+    }
 }
