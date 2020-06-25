@@ -23,12 +23,23 @@
         {
             // Make changes here to the powershell.exe profile
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-            "name": "PowerShell",
+            "name": "PowerShell 5",
             "commandline": "powershell.exe",
             "hidden": false,
             "fontFace": "Cascadia Code",
             "fontSize": 13,
             "background": "#012456",
+            "startingDirectory": ".",
+            "suppressApplicationTitle": true
+        },
+        {
+            "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+            "name": "PowerShell Core",
+            "source": "Windows.Terminal.PowershellCore",
+            "hidden": false,
+            "fontFace": "Cascadia Code",
+            "fontSize": 13,
+            "background": "#530cb1",
             "startingDirectory": ".",
             "suppressApplicationTitle": true
         },
@@ -40,7 +51,8 @@
             "fontFace": "Cousine",
             "fontSize": 13,
             "startingDirectory": ".",
-	        "suppressApplicationTitle": true
+            "suppressApplicationTitle": true,
+            "icon": "%USERPROFILE%/Anaconda3/Menu/anaconda-navigator.ico"
         },
         {
             // Make changes here to the cmd.exe profile
@@ -58,8 +70,7 @@
             "hidden": false,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure"
-        }
-	    
+        } 
     ],
 
     // Add custom color schemes to this array

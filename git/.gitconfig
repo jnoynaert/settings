@@ -7,6 +7,8 @@
 	history = log --graph --abbrev-commit --decorate --date=relative --all
 	amend = commit --amend
 	tag = tag -a
+	tags = tag
 	merge = merge --no-ff
+	unlikeablemerge = merge
 [push]
 	followTags = true
