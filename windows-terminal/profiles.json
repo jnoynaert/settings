@@ -39,7 +39,7 @@
             "hidden": false,
             "fontFace": "Cascadia Code",
             "fontSize": 13,
-            "background": "#530cb1",
+            "background": "#320270",
             "startingDirectory": ".",
             "suppressApplicationTitle": true
         },
