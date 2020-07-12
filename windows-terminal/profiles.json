@@ -46,9 +46,20 @@
         {
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6102}",
             "commandline": "cmd.exe /K C://Users//jnoynaert//Anaconda3//Scripts//activate.bat C://Users//jnoynaert//Anaconda3",
-	        "name": "Conda (Windows)",
+	        "name": "Conda (Cmd)",
             "hidden": false,
             "fontFace": "Cousine",
+            "fontSize": 13,
+            "startingDirectory": ".",
+            "suppressApplicationTitle": true,
+            "icon": "%USERPROFILE%/Anaconda3/Menu/anaconda-navigator.ico"
+        },
+        {
+            "guid": "{94d2d84c-9156-4eb7-8243-2b12128ff454}",
+            "commandline": "powershell.exe -ExecutionPolicy ByPass -NoExit -Command \"& 'C://Users//jnoynaert//Anaconda3//shell//condabin//conda-hook.ps1' ; conda activate 'C://Users//jnoynaert//Anaconda3' \"",
+	        "name": "Conda (Powershell)",
+            "hidden": false,
+            "fontFace": "Cascadia Code",
             "fontSize": 13,
             "startingDirectory": ".",
             "suppressApplicationTitle": true,
