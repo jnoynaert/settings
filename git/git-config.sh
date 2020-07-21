@@ -11,3 +11,4 @@ git config --global alias.tags "tag"
 git config --global alias.merge "merge --no-ff"
 git config --global alias.unlikeablemerge "merge"
 git config --global push.followTags true
+git config core.ignorecase false

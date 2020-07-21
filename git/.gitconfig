@@ -12,3 +12,5 @@
 	unlikeablemerge = merge
 [push]
 	followTags = true
+[core]
+	ignorecase = false
