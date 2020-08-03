@@ -137,7 +137,7 @@
             "keys":["ctrl+j"]
         },
         {
-            "command": {"action": "moveFocus", "direction":"down"},
+            "command": {"action": "moveFocus", "direction":"up"},
             "keys":["ctrl+k"]
         },
         {

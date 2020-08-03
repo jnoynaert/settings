@@ -161,7 +161,7 @@ if ($proceed = "y") {
                 New-Item -ItemType HardLink -Path "$adsconfig\keybindings.json" -Value "$runpath\azure-data-studio\keybindings.json"
                 # New-Item -ItemType HardLink -Path "$adsconfig\settings.json" -Value "$runpath\azure-data-studio\settings.json"
 
-            Write-Verbose "Azure Data Studio settings finished. Don't forget to install Sand Dance extension."
+            Write-Verbose "Azure Data Studio settings finished. See list of recommended extensions in your ADS settings."
 
         } else {
 
