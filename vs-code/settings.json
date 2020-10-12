@@ -32,6 +32,7 @@
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#0000",
         "activityBarBadge.foreground": "#0000",
+        "tab.lastPinnedBorder": "#005ca4"
     },
 
     "powershell.integratedConsole.showOnStartup": false,
