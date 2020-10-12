@@ -1,6 +1,9 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Toggle between terminal and editor focus
+
+//show all open editors: ctrl k -> ctrl p
+
+// Toggle between terminal and editor focus
 { "key": "ctrl+`", "command": "workbench.action.terminal.focus"},
 { "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
 { "key": "ctrl+alt+`", "command": "workbench.action.terminal.toggleTerminal"},
@@ -46,5 +49,25 @@
 {
     "key": "ctrl+pageup",
     "command": "-workbench.action.previousEditor"
+},
+{
+    "key": "ctrl+enter",
+    "command": "python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+},
+{
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+},
+{
+    "key": "shift+enter",
+    "command": "python.datascience.execSelectionInteractive",
+    "when": "editorTextFocus && python.datascience.featureenabled &&  !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+},
+{
+    "key": "shift+enter",
+    "command": "-python.datascience.execSelectionInteractive",
+    "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
 }
 ]

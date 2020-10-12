@@ -9,7 +9,7 @@
     "workbench.statusBar.visible": false,
     "workbench.tree.indent": 20,
     "workbench.colorTheme": "One Dark Pro",
-    "oneDarkPro.editorTheme": "Onedark Pro",
+    "oneDarkPro.editorTheme": "onedarkPro",
     
     "editor.fontFamily": "Hack",
 
@@ -47,5 +47,9 @@
     "[python]": {
         "editor.formatOnSave": true
     },
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "scm.alwaysShowRepositories": true,
+    // "python.formatting.blackArgs": [
+    //     "--line-length 88"
+    // ]
 }
