@@ -6,7 +6,7 @@
     "terminal.integrated.cursorBlinking": true,
 
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "workbench.tree.indent": 20,
     "workbench.colorTheme": "One Dark Pro",
     "oneDarkPro.editorTheme": "onedarkPro",
@@ -17,7 +17,7 @@
     "editor.minimap.enabled": false,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.renderIndentGuides": false,
-    "editor.find.autoFindInSelection": "always",
+    "editor.find.autoFindInSelection": "multiline",
     "editor.find.seedSearchStringFromSelection": false,
     "breadcrumbs.enabled": false,
 

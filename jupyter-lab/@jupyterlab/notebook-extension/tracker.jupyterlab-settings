@@ -25,7 +25,7 @@
     "markdownCellConfig": {
       "fontSize": 15,
       "insertSpaces": true,
-      "fontFamily": "Fira Mono",
+      "fontFamily": "Fira Code",
       "lineHeight": null,
       "lineWrap": "on",
       "autoClosingBrackets": false,
@@ -41,7 +41,7 @@
     "rawCellConfig": {
       "fontSize": 15,
       "insertSpaces": true,
-      "fontFamily": "Fira Mono",
+      "fontFamily": "Fira Code",
       "lineHeight": null,
       "lineWrap": "on",
       "autoClosingBrackets": false,
