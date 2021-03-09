@@ -93,5 +93,14 @@
         "key": "shift+enter",
         "command": "-python.datascience.execSelectionInteractive",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
     }
 ]

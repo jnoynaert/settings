@@ -1,15 +1,14 @@
 {
     //"terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
     "terminal.integrated.shell.windows": "C:\\windows\\System32\\cmd.exe",
-    "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "Cascadia Code",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.cursorBlinking": true,
 
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.visible": true,
     "workbench.tree.indent": 20,
     "workbench.colorTheme": "One Dark Pro",
-    "oneDarkPro.editorTheme": "onedarkPro",
+    "oneDarkPro.editorTheme": "oneDarkPro",
     
     "editor.fontFamily": "Hack",
 
@@ -37,19 +36,32 @@
 
     "powershell.integratedConsole.showOnStartup": false,
 
-    "julia.enableTelemetry": true,
-    "julia.enableCrashReporter": true,
+    "julia.enableTelemetry": false,
+    "julia.enableCrashReporter": false,
     "julia.NumThreads": 4,
     
     "python.dataScience.searchForJupyter": false,
     
     "python.formatting.provider": "black",
-    "python.dataScience.askForKernelRestart": false,
+    "jupyter.askForKernelRestart": false,
     "[python]": {
         "editor.formatOnSave": true
     },
-    "tabnine.experimentalAutoImports": true,
+    
     "scm.alwaysShowRepositories": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "jupyter.interactiveWindowMode": "perFile",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    
     // "python.formatting.blackArgs": [
     //     "--line-length 88"
     // ]
