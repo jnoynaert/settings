@@ -61,6 +61,7 @@
             "filenamePattern": "*.ipynb"
         }
     ],
+    "workbench.statusBar.visible": false,
     
     // "python.formatting.blackArgs": [
     //     "--line-length 88"
