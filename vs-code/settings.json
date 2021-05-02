@@ -61,6 +61,25 @@
             "filenamePattern": "*.ipynb"
         }
     ],
+    "oracledevtools.bookmarkFileFolder": "C:\\Users\\jared.noynaert\\Oracle\\oracle.oracledevtools",
+    "oracledevtools.connectionConfiguration.configFilesFolder": "C:\\Users\\jared.noynaert\\Oracle\\network\\admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "C:\\Users\\jared.noynaert\\Oracle\\network\\admin",
+    "oracledevtools.connections": [
+        {
+            "authenticationType": 2,
+            "dBAPrivilege": "None",
+            "userID": "JNOYNAERT",
+            "passwordSaved": false,
+            "dataSource": "cwl-dc01-oracle:1522/kwlprod.craneww.com",
+            "connectionType": 2,
+            "databaseHostName": "cwl-dc01-oracle",
+            "databasePortNumber": "1522",
+            "databaseServiceName": "kwlprod.craneww.com",
+            "name": "JNOYNAERT.kwlprod.craneww.com",
+            "currentSchema": "",
+            "tnsAdmin": "C:\\Users\\jared.noynaert\\Oracle\\network\\admin"
+        }
+    ],
     "workbench.statusBar.visible": false,
     
     // "python.formatting.blackArgs": [
