@@ -36,7 +36,7 @@
     },
     {
         "key": "ctrl+shift+t",
-        "command": "shellLauncher.launch"
+        "command": "workbench.action.terminal.newWithProfile"
     },
     {
         "key": "ctrl+F11",
