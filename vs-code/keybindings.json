@@ -102,5 +102,10 @@
         "key": "ctrl+shift+d",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "workbench.action.terminal.runSelectedText",
+        "when": "editorTextFocus && editorLangId == 'markdown' || editorTextFocus && editorLangId == 'shellscript'" //and operator has precedence so this resolves correclty
     }
 ]
